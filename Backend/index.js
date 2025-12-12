@@ -3,32 +3,34 @@ import express from "express"
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.get('/jokes', (req, res)=>{
-    const jokes=[{
-    "id": 1,
-    "title": "Library Mystery",
-    "content": "I asked the librarian if the library had books on paranoia. She whispered, 'They're right behind you...'"
+app.get('/api/jokes', (req, res)=>{
+    const jokes=[
+  {
+    "tis": "001",
+    "title": "Atomic Trust Issues",
+    "content": "Why don’t scientists trust atoms? Because they make up everything!"
   },
   {
-    "id": 2,
-    "title": "Computer Problem",
-    "content": "My computer beat me at chess, but it was no match for me at kickboxing."
+    "tis": "002",
+    "title": "Foggy Attempt",
+    "content": "I tried to catch fog yesterday. Mist."
   },
   {
-    "id": 3,
-    "title": "Time Travel",
-    "content": "I was going to tell you a time-travel joke, but you didn't like it."
+    "tis": "003",
+    "title": "Top Performer",
+    "content": "Why did the scarecrow win an award? He was outstanding in his field!"
   },
   {
-    "id": 4,
-    "title": "Parallel Lines",
-    "content": "Parallel lines have so much in common. It’s a shame they’ll never meet."
+    "tis": "004",
+    "title": "Pasta Fraud",
+    "content": "What do you call fake spaghetti? An impasta!"
   },
   {
-    "id": 5,
-    "title": "Broken Pencil",
-    "content": "I tried to write with a broken pencil... but it was pointless."
-  }]
+    "tis": "005",
+    "title": "Sad Math Book",
+    "content": "Why did the math book look sad? It had too many problems."
+  }
+]
     res.send(jokes)
 })
 
